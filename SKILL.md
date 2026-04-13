@@ -1,7 +1,7 @@
 ---
 name: price-compare-browser
-version: 1.2.0
-description: Use this skill when the user wants to compare prices for any product across websites using the browser, find the cheapest listing, compare product variants such as color, storage, size, model, pack count, or region, check shipping or delivery costs, and verify which offer is actually best after visible fees, discounts, and retailer terms. Prefer a fixed retailer set first: Noon.com, Amazon.com, Amazon.sa, Jarir.com, and Alephksa.com.
+version: "1.2.0"
+description: "Use this skill when the user wants to compare prices for any product across websites using the browser, find the cheapest listing, compare product variants such as color, storage, size, model, pack count, or region, check shipping or delivery costs, and verify which offer is actually best after visible fees, discounts, and retailer terms. Prefer a fixed retailer set first: Noon.com, Amazon.com, Amazon.sa, Jarir.com, and Alephksa.com."
 ---
 
 # Price Compare Browser
