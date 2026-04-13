@@ -1,6 +1,6 @@
 ---
 name: price-compare-browser
-version: "1.2.0"
+version: "1.3.0"
 description: "Use this skill when the user wants to compare prices for any product across websites using the browser, find the cheapest listing, compare product variants such as color, storage, size, model, pack count, or region, check shipping or delivery costs, and verify which offer is actually best after visible fees, discounts, and retailer terms. Prefer a fixed retailer set first: Noon.com, Amazon.com, Amazon.sa, Jarir.com, and Alephksa.com."
 ---
 
@@ -41,6 +41,26 @@ Examples:
 - site:amazon.com iPhone 15 Pro
 
 Prefer direct product pages over category pages, blog pages, or search result pages.
+
+## Browser Interaction Rules
+
+Do not rely only on the first visible products on a page.
+
+When browsing retailer websites:
+
+1. Scroll down through search results and category pages to inspect more than the first row of items.
+2. Continue scrolling until enough relevant items have loaded or until the page clearly stops loading more results.
+3. Use pagination, "load more" buttons, filters, and sorting controls when available.
+4. Open multiple promising listings from different positions in the results, not only the top-ranked ones.
+5. Check product detail pages after scrolling, because better matches or lower prices may appear below the fold.
+6. If the site uses infinite scroll, wait for additional products to load before deciding that the visible set is complete.
+7. If the site has sponsored results, do not assume those are the best offers; keep scrolling to inspect organic listings too.
+
+Minimum browsing rule:
+
+- Review beyond the first screen of results on each preferred retailer whenever search results are shown.
+- If a site has many matches, inspect at least several relevant listings from different parts of the results before concluding.
+- If a filter such as storage, condition, seller, or availability exists, apply it before comparing prices.
 
 ## Inputs to Gather
 
@@ -91,12 +111,13 @@ Color usually matters less than storage or condition, but it should still be pre
 
 1. Check the preferred retailer set first: Noon.com, Amazon.com, Amazon.sa, Jarir.com, and Alephksa.com.
 2. Search the product on each site using the browser.
-3. Open the most relevant listings and confirm the exact product match before comparing.
-4. Extract the fields that affect real purchase cost and comparability.
-5. If listings split into materially different variants, group them by variant before ranking.
-6. Remove mismatched products, bundles, refurbished units, subscription prices, member-only prices, preorder listings, and out-of-stock offers unless the user asked for them.
-7. If the preferred retailer set is insufficient, expand to other reputable retailers.
-8. Present the best options in a compact comparison table, then recommend the best choice based on the user's goal.
+3. Scroll through results, use filters, and inspect more than the first visible items before deciding which listings to open.
+4. Open the most relevant listings and confirm the exact product match before comparing.
+5. Extract the fields that affect real purchase cost and comparability.
+6. If listings split into materially different variants, group them by variant before ranking.
+7. Remove mismatched products, bundles, refurbished units, subscription prices, member-only prices, preorder listings, and out-of-stock offers unless the user asked for them.
+8. If the preferred retailer set is insufficient, expand to other reputable retailers.
+9. Present the best options in a compact comparison table, then recommend the best choice based on the user's goal.
 
 Always compare at least 3 valid sources when possible. Prefer official stores and established retailers before low-trust sellers.
 
